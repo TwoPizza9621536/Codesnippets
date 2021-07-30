@@ -12,6 +12,13 @@ permalink: /
 
 This is a place where the snippets are stored for my blogs.
 
+## Search
+
+---
+
+If you have a snippet name and language you can search it
+[here]({{ '/search.html' | relative_url}}).
+
 ## Languages
 
 Here all the languages in the repo.
