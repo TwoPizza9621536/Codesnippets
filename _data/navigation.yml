@@ -6,12 +6,14 @@
   link: /blogs/
 - name: Javascript
   link: /javascript
+- name: Search
+  link: /snippets/search.html
 - name: Snippets
   link: /snippets
 - name: Staff
   link: /staff.html
 - name: About
-  link: /about
+  link: /snippets/about.html
 - name: Privacy
   link: /privacy
 - name: Contact
