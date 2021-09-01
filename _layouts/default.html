@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<head>
     {% include top.html %}
-    
-    <body>
-        {% include header.html %}
+</head>
 
-        {% include navigation.html %}
+<body>
+    {% include header.html %}
 
-        <main class="main-content" id="content" role="main">
-            {{ content }}
-        </main>
+    {% include navigation.html %}
 
-        {% include navigation.html %}
+    <main class="main-content" id="content" role="main">
+        {{ content }}
+    </main>
 
-        {% include footer.html %}
-    </body>
-</html>
+    {% include navigation.html %}
+
+    {% include footer.html %}
+</body>
