@@ -6,7 +6,7 @@ tag: Python
 description: Python snippets for the main site.
 ---
 
-# Python
+## Python
 
 ---
 

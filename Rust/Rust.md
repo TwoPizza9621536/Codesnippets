@@ -6,7 +6,7 @@ tag: Rust
 description: Rust snippets for the main site.
 ---
 
-# Rust
+## Rust
 
 ---
 

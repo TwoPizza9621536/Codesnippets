@@ -6,7 +6,7 @@ tag: Visual Basic
 description: Visual Basic snippets for the main site.
 ---
 
-# Visual Basic
+## Visual Basic
 
 ---
 

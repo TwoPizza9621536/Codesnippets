@@ -6,7 +6,7 @@ tag: Pascal
 description: Pascal snippets for the main site.
 ---
 
-# Pascal
+## Pascal
 
 ---
 

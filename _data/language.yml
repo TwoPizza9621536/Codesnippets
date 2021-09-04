@@ -1,3 +1,5 @@
+- name: Basic
+  link: /Basic
 - name: C
   link: /C
 - name: C++
@@ -25,4 +27,4 @@
 - name: R
   link: /R
 - name: Visual Basic (.Net)
-  link: /VB
+  link: /VisualBasic

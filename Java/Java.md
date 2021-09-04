@@ -6,7 +6,7 @@ tag: Java
 description: Java snippets for the main site.
 ---
 
-# Java
+## Java
 
 ---
 

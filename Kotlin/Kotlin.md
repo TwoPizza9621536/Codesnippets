@@ -6,7 +6,7 @@ tag: Kotlin
 description: Kotlin snippets for the main site.
 ---
 
-# Kotlin
+## Kotlin
 
 ---
 

@@ -6,7 +6,7 @@ tag: C++
 description: C++ snippets for the main site.
 ---
 
-# C++
+## C++
 
 ---
 
