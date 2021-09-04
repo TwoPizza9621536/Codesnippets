@@ -2,6 +2,8 @@
 layout: post
 title: Type n character into a file for Python
 slug: type-character-file-python
+date: 2021-01-19 20:21:37 -0500
+moddate: 2021-01-20 19:31:04 -0500
 ---
 
 This is a snippet for Syntax highlighting and comparing languages.

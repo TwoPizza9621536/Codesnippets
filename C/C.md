@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: list
 title: C
 permalink: /C
 tag: C
+description: C snippets for the main site.
 ---
 
 # C
@@ -10,5 +11,3 @@ tag: C
 ---
 
 For the C programing language here are the latest snippets.
-
-{% include lang.html %}

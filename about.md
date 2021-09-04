@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: Licenses for the code.
+description: Licenses for the code snippets and the font.
 ---
 
 The snippets are license under the MIT license.

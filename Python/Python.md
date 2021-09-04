@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: list
 title: Python
 permalink: /Python
 tag: Python
-slug: python
+description: Python snippets for the main site.
 ---
 
 # Python
@@ -11,5 +11,3 @@ slug: python
 ---
 
 For the Python programing/scripting language here are the latest snippets.
-
-{% include lang.html %}

@@ -1,11 +1,13 @@
 ---
-layout: page
+layout: list
 title: Kotlin
 permalink: /Kotlin
 tag: Kotlin
-slug: kotlin
+description: Kotlin snippets for the main site.
 ---
 
 # Kotlin
 
-{% include lang.html %}
+---
+
+For the Kotlin programing language here are the latest snippets.

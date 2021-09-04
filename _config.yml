@@ -23,7 +23,7 @@ email: twopizza9621536@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the page where the code snippets is store.
   See the about page for the license for this repo.
-  To see my GitHub profile go to https://github.com/TwoPizza9621536.
+  See the main page for the content.
 baseurl: "/snippets" # the subpath of your site, e.g. /blog
 url: "https://twopizza9621536.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TwoPizza9621536

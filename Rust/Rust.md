@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: list
 title: Rust
 permalink: /Rust
 tag: Rust
-slug: rust
+description: Rust snippets for the main site.
 ---
 
 # Rust
@@ -11,5 +11,3 @@ slug: rust
 ---
 
 For the Rust programing/scripting language here are the latest snippets.
-
-{% include lang.html %}

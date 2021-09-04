@@ -1,11 +1,13 @@
 ---
-layout: page
+layout: list
 title: Java
 permalink: /Java
 tag: Java
-slug: java
+description: Java snippets for the main site.
 ---
 
 # Java
 
-{% include lang.html %}
+---
+
+For the Java programing language here are the latest snippets.

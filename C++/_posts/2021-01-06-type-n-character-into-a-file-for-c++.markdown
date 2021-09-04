@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Type n character into a file for C++
-slug: type-character-file-
-moddate: 2021-01-19 20:26:57 -0500
+slug: type-character-file-c++
+date: 2021-01-19 17:44:28 -0500
+moddate: 2021-09-04 03:31:36 -0500
 ---
 
 This is a snippet for Syntax highlighting and comparing languages.
@@ -55,5 +56,5 @@ int main(int argc, char **argv)
 }
 {% endhighlight %}
 
-[Click Here]({{ "../assets/src/CPlusPlus/Printchara.cpp" | relative_url }}){:target="blank"}
+[Click Here]({{ "../assets/src/C++/Printchara.cpp" | relative_url }}){:target="blank"}
 to download the file.
