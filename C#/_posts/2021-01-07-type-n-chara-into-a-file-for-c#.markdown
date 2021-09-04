@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Type n character into a file for C#
+title: Type n chara into a file for C#
 date: 2021-01-20 10:11:43 -0500
 moddate: 2021-01-20 10:11:43 -0500
 slug: type-character-file-c#
