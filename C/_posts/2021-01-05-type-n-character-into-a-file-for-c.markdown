@@ -4,10 +4,10 @@ title: Type n character into a file for C
 date: 2021-01-20 10:11:43 -0500
 moddate: 2021-01-20 10:11:43 -0500
 slug: type-character-file-c
-description: C snippets for the main site.
+description: C snippet for printchara.
 ---
 
-This is a snippet for Syntax highlighting and comparing languages.
+This is a snippet for syntax highlighting and comparing languages.
 Below is the snippet for C.
 
 Depending on your OS you will need to change the
