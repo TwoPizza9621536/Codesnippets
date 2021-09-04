@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Type n character into a file for Kotlin
+title: Type n chara into a file for Kotlin
 date: 2021-01-19 20:21:37 -0500
 moddate: 2021-01-20 19:31:04 -0500
 slug: type-character-file-kotlin
