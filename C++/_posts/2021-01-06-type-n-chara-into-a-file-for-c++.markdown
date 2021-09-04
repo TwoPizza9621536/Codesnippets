@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Type n character into a file for C++
+title: Type n chara into a file for C++
 slug: type-character-file-c++
 date: 2021-01-19 17:44:28 -0500
 moddate: 2021-09-04 03:31:36 -0500
