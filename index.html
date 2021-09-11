@@ -8,13 +8,13 @@ toc:
 ---
 
 <h2>Welcome</h2>
-<hr />
+<hr>
 <p>
   This is a place where the snippets are stored for my blogs.
 </p>
 
 <h3>Search</h3>
-<hr />
+<hr>
 <p>
   If you have a snippet name you can search it
   <a herf="{{ '/search.html' | relative_url}}">
@@ -23,7 +23,7 @@ toc:
 </p>
 
 <h3>Latest Snippets</h3>
-<hr />
+<hr>
 
 <!-- This loops through the paginated posts -->
 <div class="pagpost">
@@ -38,8 +38,21 @@ toc:
   {% endfor %}
 </div>
 
+<h3>Tags and Catagories</h3>
+<hr>
+
+<p>
+  To find a tag, category, or the year the snippet is published under:
+  <br>
+  <a href="{{ '/tag' | relative_url }}">Tags</a>
+  <br>
+  <a href="{{ '/category' | relative_url }}">Catagories</a>
+  <br>
+  <a href="{{ '/year' | relative_url }}">Year</a>
+</p>
+
 <h3>License</h3>
-<hr />
+<hr>
 <p>
   See the
     <a href="{{ '/about.html' | relative_url }}"

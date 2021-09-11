@@ -50,13 +50,15 @@ jekyll-archives:
   enabled:
     - categories
     - tags
+    - year
   layout: archive
   layouts:
     - category: category-archive
     - tag: tag-archive
   permalinks:
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+    tag: '/tag/:name'
+    category: '/category/:name'
+    year: '/year/:year'
 
 
 # Authors
