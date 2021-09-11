@@ -1,10 +1,25 @@
 ---
 layout: post
 title: Type Number of Characters Into A File
-date: 
+date: 2021-01-21 16:28:19 -0500
 moddate: 
-tags: C C++ C# Python Java Kotlin
-categories: Programing Languages
+tags:
+  - C
+  - C++
+  - C#
+  - Python
+  - Java
+  - Kotlin
+  - Visual Basic
+  - D
+  - Fortran
+  - Dart
+  - Rust
+categories:
+  - Languages
+  - Programming Languages
+  - Programming
+  - Comparison
 toc:
   enabled: true
 ---
@@ -13,48 +28,45 @@ This is page for the snippets shown in .
 
 ## C
 
-{% highlight cpp %}
+Linux ISO C compatible for the download.
+This is for Windows.
+
+{% highlight c %}
 // Define any preprocessor header files
-#include <iostream>
-#include <fstream>
-#include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
 
-// define the standard library unless you name
-// your function after std functions
-
-using namespace std;
-
-// Entry point
+// Entry Point
 int main(int argc, char **argv)
 {
     // Set variables
     int num = 0;
-    string filename;
+    char filename[23];
 
     // Ask how many A's should be written
     // and the name of the file
-    cout << "How many 'A' should be written to a file: " << endl;
-    cin >> num;
+    printf("How many 'A' should be written to a file: \n");
+    scanf("%d", &num);
 
-    cout << "What is the name for the file: " << endl;
-    cin >> filename;
+    printf("What is the name for the file: (Must be 20 characters excluding .txt): \n");
+    scanf("%s", filename);
 
     // Create a file and write to it then close it
-    ofstream file;
+    FILE *fptr;
 
-    file.open(filename);
+    fptr = fopen(filename, "w");
 
-    for (int i = 0; i < num; i++)
+    for (size_t i = 0; i < num; i++)
     {
-        file << 'A';
+        fprintf(fptr, "%c", 'A');
     }
 
-    file.close();
+    fclose(fptr);
 
     // If previous operation completed then press any key to exit
-    cout << "Operation Completed. Press any key to exit." << endl;
-    cin.ignore();
-    cin.get();
+    printf("Operation Completed. Press any to exit.\n");
+    getchar();
 
     return 0;
 }
@@ -318,5 +330,230 @@ using (FileStream fs = File.Create(pathString))
 // If previous operation completed then press any key to exit
 Console.WriteLine("Operation Complete. Press any key to exit.");
 Console.ReadKey();
+}
+{% endhighlight %}
+
+## Visual Basic
+
+{% highlight vb %}
+' Define any namespace
+Imports System
+Imports System.IO
+
+''' <summery>
+''' Visual Basic .Net is almost compatible with C#.
+''' The syntax is Visual Basic 6.0 but all of the
+''' functions are from the .Net framework.
+''' Entry Point similar to Pascal and Fortran.
+''' VB is based on Basic if you did not notice already
+''' which has an Entry Point that is similar to the
+''' two programing languages above.
+''' </summery>
+
+' Entry Point
+Module Printchara
+    Sub Main()
+        ' Ask how many 'A' should be written
+        ' and the name of the file
+        Console.WriteLine("How many 'A' should be written to a file: ")
+        Dim num As String = Console.ReadLine()
+
+        ' Set variables
+        Dim newnum As Integer = 0
+
+        ' Fast Parsing without quiting
+        While Not Integer.TryParse(num, newnum)
+            Console.WriteLine("Please enter a positive number: ")
+            num = Console.ReadLine()
+        End While
+
+        Console.WriteLine("What is the name for the file: ")
+        Dim filename As String = Console.ReadLine()
+
+        ' Get directory and add the file name
+        Dim currentDirName As String = Directory.GetCurrentDirectory()
+        Dim pathString As String = Path.Combine(currentDirName, filename)
+
+        ' Create a file and write to it then close it
+        Using fs As Filestream = File.Create(pathString)
+            For i As Integer = 0 To newnum
+                fs.WriteByte(Convert.ToByte("A"))
+            Next i
+        End Using
+
+        ' If previous operation completed then press any key to exit
+        Console.WriteLine("Operation Complete. Press any key to exit.")
+        Console.ReadKey()
+    End Sub
+End Module
+{% endhighlight %}
+
+## Rust
+
+{% highlight rs %}
+// import namespace of needed
+use std::io;
+use std::path::Path;
+use std::fs::File;
+use std::io::Write;
+
+// Entry point
+fn main() {
+    // set variables
+    let mut num = String::new();
+    let mut filename = String::new();
+    let mut void = String::new();
+
+    // Ask how many A's should be written
+    // and the name of the file
+    println!("How many 'A' should be written to a file: ");
+    io::stdin()
+        .read_line(&mut num)
+        .expect("Failed to read line");
+    let num: u32 = num.trim().parse().expect("Failed to parse string");
+
+    println!("What is the name for the file: ");
+    io::stdin()
+        .read_line(&mut filename)
+        .expect("Failed to read line");
+
+    let file_path: String = filename.trim().to_string();
+
+    // Create a file and write to it then close
+    writefile(file_path, num).expect("Failed to write file");
+
+    // If previous operation completed then press any key to exit
+    println!("Operation Completed. Press Enter to exit.");
+    io::stdin()
+        .read_line(&mut void)
+        .expect("Failed to read line");
+}
+
+// Have a another function to handle exceptions
+fn writefile(filename: String, num: u32) -> std::io::Result<()> {
+    // Get directory and add the file name
+    let full_path = Path::new(&filename);
+    let mut file = File::create(&full_path)?;
+
+    let mut counter = 0;
+    while counter < num {
+        file.write("A".as_bytes())?;
+        counter += 1;
+    }
+    return Ok(());
+}
+{% endhighlight %}
+
+## D
+
+{% highlight d %}
+// Import the standard library components
+// This is the similar to c/c++ and alike
+// languages
+import std.stdio;
+import std.string;
+import std.file;
+
+void main()
+{
+    // Set variables
+    int num = 0;
+    string filename;
+
+    // Ask how many A's should be written
+    // and the name of the file
+    writeln("How many 'A' should be written to a file: ");
+    readf(" %d\n", &num);
+
+    writeln("What is the name for the file: ");
+    readf(" %s\n", &filename);
+
+    // Create a file and write to it then close it
+    File file = File(filename, "w");
+
+    for (int i = 0; i < num; i++)
+    {
+        file.write('A');
+    }
+
+    writeln("Operation Completed. Press Enter to exit.");
+    readln();
+}
+{% endhighlight %}
+
+## Fortran
+
+For Fortran 90 may be compatible with later fortran.
+This is in Fortan 2008 highlighting.
+
+{% highlight fortan %}
+! Entry Point
+! This is similar to Pascal
+program Printchara
+    implicit none
+
+    ! Declare variables
+    INTEGER :: num
+    INTEGER :: i
+    CHARACTER(24) :: filename
+
+    ! Ask how many 'A' should be written
+    ! and the name of the file
+    PRINT *, "How many 'A' should be written to a file: "
+    READ(*,*) num
+
+    PRINT *, "What is the name for the file: (Must be 20 characters excluding .txt): "
+    READ(*,*) filename
+
+    ! Create a file and write to it then close it
+    OPEN(1, file = filename)
+    do i = 0, num
+        WRITE(1, "(A)", advance='no') 'A'
+    end do
+    CLOSE(1)
+
+    ! If previous operation completed then press Enter to exit
+    PRINT *, "Operation Complete. Press Enter to exit."
+    READ(*,*)
+end program Printchara
+{% endhighlight %}
+
+## Dart
+
+{% highlight dart %}
+// import modules if needed
+import 'dart:core';
+import 'dart:io';
+
+// uncomment this to run it
+// import 'package:print_chara/print_chara.dart' as print_chara;
+
+// Entry point
+void main() {
+    // Ask how many A's should be written
+    // and the name of the file
+    // Dart is C and javascript like language.
+
+    print("How many 'A' should be written to a file: ");
+    var num = stdin.readLineSync();
+
+    var newnum = int.parse(num!);
+    assert(newnum is int);
+
+    print('What is the name for the file: ');
+    var filename = stdin.readLineSync();
+
+    // Create a file and write to it then close it
+    // The writing process is similar to Java/Kotlin
+    var file = File(filename!);
+    var stream = file.openWrite();
+    for (var i = 0; i < newnum; i++) {
+        stream.writeCharCode(65);
+    }
+    stream.close();
+
+    // If previous operation completed then press any key to exit
+    print('Complete. Press Enter to exit.');
+    stdin.readLineSync();
 }
 {% endhighlight %}
