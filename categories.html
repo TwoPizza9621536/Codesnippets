@@ -1,0 +1,26 @@
+---
+layout: page
+title: Categories
+description: Categories for the snippets.
+slug: categories
+---
+
+<ul class="category">
+{% for category in site.categories %}
+  {% assign category_name = category[0] | replace: '-', ' ' %}
+  <li class="category__item">
+    <a
+      href="{{ '/category/{{ category[0] }}/' | relative_url }}"
+      title="{{ category_name }}"
+      >{{ category_name }}</a
+    >
+  </li>
+{% endfor %}
+</ul>
+
+<p>
+  See all
+  <a href="{{ {{ '/blogs/tags.html' | relative_url }}"
+    >tags</a
+  >.
+</p>

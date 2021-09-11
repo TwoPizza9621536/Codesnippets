@@ -53,6 +53,16 @@ jekyll-archives:
     - day
   layout: archive
 
+# AutoPages
+autopages:
+  enabled: true
+  categories:
+    title: 'Posts in category :cat'
+  tags:
+    title: 'Posts tagged with :tag'
+  collections:
+    title: 'Posts in collection :coll'
+
 # Authors
 collections:
   authors:
