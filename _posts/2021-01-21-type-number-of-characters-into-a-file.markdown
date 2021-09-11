@@ -2,7 +2,7 @@
 layout: post
 title: Type Number of Characters Into A File
 date: 2021-01-21 16:28:19 -0500
-moddate: 
+moddate: 2021-09-11 16:17:58 -0500
 tags:
   - C
   - C++
