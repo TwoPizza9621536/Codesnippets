@@ -26,6 +26,7 @@
 import 'dart:core';
 import 'dart:io';
 
+// uncomment this to run it
 // import 'package:print_chara/print_chara.dart' as print_chara;
 
 // Entry point
