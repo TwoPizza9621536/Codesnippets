@@ -2,13 +2,30 @@
 layout: default
 ---
 
-<h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
+{% if page.type == 'year' %}
+<h2>Archive {{ page.date | date: "%Y" }}</h2>
+{% elsif page.type == 'month' %}
+<h2>Archive {{ page.date | date: "%B %Y" }}</h2>
+{% elsif page.type == 'day' %}
+<h2>Archive {{ page.date | date: "%B %-d, %Y" }}</h2>
+{% else %}
+<h2>Archive with {{ page.type }} '{{ page.title }}'</h2>
+{% endif %}
 
 <ul class="posts">
 {% for post in page.posts %}
   <li>
     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <h3>
+        <a
+          class="post-link"
+          href="{{ post.url | relative_url }}"
+          >{{ post.title }}</a
+        >
+      </h3>
+      <p>
+        {{ post.excerpt }}
+      </p>
   </li>
 {% endfor %}
 </ul>

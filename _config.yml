@@ -35,12 +35,12 @@ encoding: UTF-8
 timezone: America/New_York
 
 # Pagination
-permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title:output_ext
 pagination:
   enabled: true
   per_page: 5
   permalink: "/page:num/"
-  title: " - page :num"
+  title: ":title - page :num"
   limit: 0
   sort_field: "date"
   sort_reverse: true
@@ -48,18 +48,10 @@ pagination:
 # Archive
 jekyll-archives:
   enabled:
-    - categories
-    - tags
     - year
+    - month
+    - day
   layout: archive
-  layouts:
-    - category: category-archive
-    - tag: tag-archive
-  permalinks:
-    tag: '/tag/:name'
-    category: '/category/:name'
-    year: '/year/:year'
-
 
 # Authors
 collections:
