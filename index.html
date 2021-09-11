@@ -9,9 +9,21 @@ toc:
 
 <h2>Welcome</h2>
 <hr>
+
 <p>
   This is a place where the snippets are stored for my blogs.
 </p>
+
+<div style="text-align: center;">
+  <p class="TnCLink">
+    To see
+    <a href="{{ '/tags.html' | relative_url }}"> tags click here</a>.
+    To see
+    <a href="{{ '/categories.html' | relative_url }}">
+      categories click here</a
+    >.
+  </p>
+</div>
 
 <h3>Search</h3>
 <hr>
@@ -25,33 +37,7 @@ toc:
 <h3>Latest Snippets</h3>
 <hr>
 
-<!-- This loops through the paginated posts -->
-<div class="pagpost">
-  {% for post in paginator.posts %}
-  <h4 class="posttitle"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-  <p class="author">
-    <span class="date">Posted On: {{ post.date }}</span>
-    {% if post.datemod %}
-    <span class="date">Last Updated On: {{ post.moddate }}</span>
-    {% endif %}
-  </p>
-  <div class="content">
-    {{ post.excerpt }}
-  </div>
-  {% endfor %}
-</div>
-
-<h3>Tags and Catagories</h3>
-<hr>
-
-<p class="TnCLink">
-  To see
-  <a href="{{ '/tags.html' | relative_url }}"> tags click here</a>.
-  To see
-  <a href="{{ '/categories.html' | relative_url }}">
-    categories click here</a
-  >.
-</p>
+{% include pagination.html %}
 
 <h3>License</h3>
 <hr>
@@ -63,32 +49,7 @@ toc:
   for more info.
 </p>
 
-<!-- Pagination links -->
-<div class="pagination">
-  <div class="page_number_container">
-    {% if paginator.previous_page %}
-    <a
-      href="{{ paginator.previous_page_path | prepend: site.baseurl }}"
-      class="newer_link"
-      >Newer</a
-    >
-    {% else %}
-    <span class="newer">Newer</span>
-    {% endif %}
-    <span class="page_number_rel">
-      Page: {{ paginator.page }} of {{ paginator.total_pages }}
-    </span>
-    {% if paginator.next_page %}
-    <a
-      href="{{ paginator.next_page_path | prepend: site.baseurl }}"
-      class="older_link"
-      >Older</a
-    >
-    {% else %}
-    <span class="older">Older</span>
-    {% endif %}
-  </div>
-</div>
+{% include next-back-links.html %}
 
 <style type="text/css">
 .pagpost {

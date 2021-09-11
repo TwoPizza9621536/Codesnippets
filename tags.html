@@ -10,7 +10,7 @@ slug: tags
   {% assign tag_name = tag[0] %}
   <li class="tag__item">
     <a
-      href="{{ '/tag/{{ tag[0] }}/' | relative_url }}"
+      href="{{ site.url }}/tag/{{ tag[0] }}/"
       title="{{ tag_name }}"
       >#{{ tag_name }}</a
     >
@@ -20,7 +20,7 @@ slug: tags
 
 <p>
   See all
-  <a href="{{ '/blogs/categories.html' | relative_url }}"
+  <a href="{{ '/categories.html' | relative_url }}"
     >categories</a
   >.
 </p>

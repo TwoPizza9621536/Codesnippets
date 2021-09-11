@@ -10,7 +10,7 @@ slug: categories
   {% assign category_name = category[0] | replace: '-', ' ' %}
   <li class="category__item">
     <a
-      href="{{ '/category/{{ category[0] }}/' | relative_url }}"
+      href="{{ site.url }}/category/{{ category[0] }}/"
       title="{{ category_name }}"
       >{{ category_name }}</a
     >
@@ -20,7 +20,7 @@ slug: categories
 
 <p>
   See all
-  <a href="{{ {{ '/blogs/tags.html' | relative_url }}"
+  <a href="{{ '/tags.html' | relative_url }}"
     >tags</a
   >.
 </p>
