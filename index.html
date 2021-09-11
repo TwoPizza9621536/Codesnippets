@@ -1,0 +1,106 @@
+---
+layout: home
+permalink: /
+pagination:
+  enabled: true
+toc:
+  enabled: true
+---
+
+<h2>Welcome</h2>
+<hr />
+<p>
+  This is a place where the snippets are stored for my blogs.
+</p>
+<h3>Search</h3>
+<hr />
+<p>
+  If you have a snippet name you can search it
+  <a herf="{{ '/search.html' | relative_url}}">
+    here</a
+  >.
+</p>
+<h3>Latest Snippets</h3>
+<hr />
+
+<!-- This loops through the paginated posts -->
+<div class="pagpost">
+  {% for post in paginator.posts %}
+  <h3 class="posttitle"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <p class="author">
+    <span class="date">Creation Date: {{ post.date }}</span>
+    {% if post.datemod %}
+    <span class="date">Modification Date: {{ post.moddate }}</span>
+    {% endif %}
+  </p>
+</div>
+
+<!-- Pagination links -->
+<div class="pagination">
+  <div class="page_number_container">
+    {% if paginator.previous_page %}
+    <a
+      href="{{ paginator.previous_page_path | prepend: site.baseurl }}"
+      class="newer_link"
+      >Newer</a
+    >
+    {% else %}
+    <span class="newer">Newer</span>
+    {% endif %}
+    <span class="page_number_rel">
+      Page: {{ paginator.page }} of {{ paginator.total_pages }}
+    </span>
+    {% if paginator.next_page %}
+    <a
+      href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+      class="older_link"
+      >Older</a
+    >
+    {% else %}
+    <span class="older">Older</span>
+    {% endif %}
+  </div>
+</div>
+
+<style type="text/css">
+.pagpost {
+  text-indent: 1rem;
+}
+.posttitle {
+  font-size: 1.8em;
+}
+.date {
+  color: #ea66a8;
+}
+.pagination {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.older_link {
+  font-size-adjust: 2em;
+}
+.older {
+  float: left;
+  color: #159957;
+}
+.page_number_container {
+  text-align: center;
+}
+.next_link {
+  font-size-adjust: 2em;
+}
+.newer {
+  float: right;
+  color: #159957;
+}
+</style>
+
+<h3>License</h3>
+<hr />
+<p>
+  See the
+    <a href="{{ '/about.html' | relative_url }}"
+      >about page</a
+    >
+  for more info.
+</p>

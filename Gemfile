@@ -8,35 +8,58 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll"
+gem 'jekyll', group: :jekyll_plugins
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-# gem "minima", "~> 2.0"
+gem 'jekyll-theme-cayman'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", ">= 214", group: :jekyll_plugins
+# gem 'github-pages', group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-sitemap"
-  gem "jekyll-seo-tag"
-  gem "sassc"
+  gem 'jekyll-feed'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-paginate-v2'
+  gem 'jekyll-sass-converter'
+  gem 'liquid'
+  gem 'jemoji'
+  gem 'nokogiri'
+  gem 'rouge'
+  gem 'sassc'
+  gem 'jekyll-coffeescript'
+  gem 'jekyll-default-layout'
+  gem 'jekyll-gist'
+  gem 'jekyll-github-metadata'
+  gem 'jekyll-optional-front-matter'
+  gem 'jekyll-readme-index'
+  gem 'jekyll-titles-from-headings'
+  gem 'jekyll-relative-links'
+  gem 'classifier-reborn'
+  gem 'jekyll-commonmark-ghpages'
+  gem 'jekyll-mentions'
+  gem 'jekyll-asciidoc'
+  gem 'html-pipeline'
+  gem 'jekyll-toc'
+  gem 'jekyll-email-protect'
+  gem 'jekyll-archives'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo"
-  gem "tzinfo-data"
+  gem 'tzinfo'
+  gem 'tzinfo-data'
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
+gem 'wdm', :install_if => Gem.win_platform?
 
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
-gem "kramdown-parser-gfm"
+gem 'kramdown-parser-gfm', '>= 1.1.0'
 
-gem "webrick", "~> 1.7"
+# webrick needed for webserver
+gem 'webrick'

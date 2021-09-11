@@ -18,19 +18,46 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Snippets | Sam W @TwoPizza9621536
+title: Samuel Wu @TwoPizza9621536
 email: twopizza9621536@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the page where the code snippets is store.
-  See the about page for the license for this repo.
-  See the main page for the content.
+  This my blogs for coding, programming, technology, and software that will go
+  into shenanigans. Keep scrolling to see my github profile.
 baseurl: "/snippets" # the subpath of your site, e.g. /blog
 url: "https://twopizza9621536.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TwoPizza9621536
-github_username:  TwoPizza9621536
+github_username: TwoPizza9621536
+
+repository: twopizza9621536/snippets
+origin: https://github.com/TwoPizza9621536/snippets.git
 
 encoding: UTF-8
 timezone: America/New_York
+
+# Pagination
+permalink: /:year/:month/:day/:title.html
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: "/page:num/"
+  title: " - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+
+# Archive
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  layouts:
+    - category: category-archive
+    - tag: tag-archive
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
 
 # Authors
 collections:
@@ -60,6 +87,23 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jemoji
+  - jekyll-paginate-v2
+  - jekyll-sass-converter
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-default-layout
+  - jekyll-commonmark-ghpages
+  - jekyll-mentions
+  - jekyll-asciidoc
+  - jekyll-toc
+  - jekyll-email-protect
+  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -69,15 +113,21 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-#   - nppBackup/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - CODE_OF_CONDUCT.md
+  - renovate.json
+
+# Additional Flags
+disable_disk_cache: true
+lsi: true
+
+sass:
+  style: compressed
+
+jekyll-mentions:
+  base_url: https://twitter.com
