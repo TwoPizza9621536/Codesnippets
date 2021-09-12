@@ -12,10 +12,19 @@ layout: default
     {% endif %}
 </p>
 
-{{ content | toc }}
+<div id="table-of-contents">
+  <input id="spoiler-check" type="checkbox">
+  <label class="spoiler post-meta" for="spoiler-check"
+    >Table Of Contents</label
+  >
+  {% toc %}
+</div>
+<div id="markdown-content">
+  {{ content }}
+</div>
 
 <p>
-    The snippet file is licensed under the MIT license
+    The snippets is licensed under the MIT license.
     <a href="{{ '/snippets/about' | relative_url }}">
         See the about page for more info.
     </a>

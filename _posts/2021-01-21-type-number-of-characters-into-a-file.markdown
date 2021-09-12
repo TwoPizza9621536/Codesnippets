@@ -20,18 +20,17 @@ categories:
   - Programming Languages
   - Programming
   - Comparison
-toc:
-  enabled: true
+toc: true
 ---
 
 This is page for the snippets shown in .
 
 ## C
 
-Linux ISO C compatible for the download.
-This is for Windows.
+The download is for Linux.
+The snippet below is for Windows.
 
-{% highlight c linenos %}
+{% highlight c linenos=table %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,7 +73,7 @@ int main(int argc, char **argv)
 
 ## C++
 
-{% highlight cpp linenos %}
+{% highlight cpp linenos=table %}
 // Define any preprocessor header files
 #include <iostream>
 #include <fstream>
@@ -123,7 +122,7 @@ int main(int argc, char **argv)
 
 ## Java
 
-{% highlight java linenos %}
+{% highlight java linenos=table %}
 // Define the project as a package to use in other java projects
 package io.Printchara;
 
@@ -185,7 +184,7 @@ public class Main {
 
 ## Kotlin
 
-{% highlight kotlin linenos %}
+{% highlight kotlin linenos=table %}
 // Kotlin is compatible with Java
 // Import modules if needed
 import java.io.File
@@ -238,7 +237,7 @@ fun main() {
 
 ## Python
 
-{% highlight py linenos %}
+{% highlight py linenos=table %}
 # Define modules if needed
 # Python does not need an entry point below is the main
 # if **name** == "**main**":
@@ -271,7 +270,7 @@ input()
 
 ## C#
 
-{% highlight c# linenos %}
+{% highlight c# linenos=table %}
 // Define any namespace
 using System;
 using System.IO;
@@ -335,7 +334,7 @@ Console.ReadKey();
 
 ## Visual Basic
 
-{% highlight vb linenos %}
+{% highlight vb linenos=table %}
 ' Define any namespace
 Imports System
 Imports System.IO
@@ -390,7 +389,7 @@ End Module
 
 ## Rust
 
-{% highlight rs linenos %}
+{% highlight rs linenos=table %}
 // import namespace of needed
 use std::io;
 use std::path::Path;
@@ -446,7 +445,7 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 
 ## D
 
-{% highlight d linenos %}
+{% highlight d linenos=table %}
 // Import the standard library components
 // This is the similar to c/c++ and alike
 // languages
@@ -486,7 +485,7 @@ void main()
 For Fortran 90 may be compatible with later fortran.
 This is in Fortan 2008 highlighting.
 
-{% highlight fortan linenos %}
+{% highlight fortan linenos=table %}
 ! Entry Point
 ! This is similar to Pascal
 program Printchara
@@ -520,7 +519,7 @@ end program Printchara
 
 ## Dart
 
-{% highlight dart linenos %}
+{% highlight dart linenos=table %}
 // import modules if needed
 import 'dart:core';
 import 'dart:io';
