@@ -30,7 +30,7 @@ This is page for the snippets shown in .
 The download is for Linux.
 The snippet below is for Windows.
 
-{% highlight c linenos=table %}
+{% highlight c %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 
 ## C++
 
-{% highlight cpp linenos=table %}
+{% highlight cpp %}
 // Define any preprocessor header files
 #include <iostream>
 #include <fstream>
@@ -120,9 +120,72 @@ int main(int argc, char **argv)
 }
 {% endhighlight %}
 
+## C#
+
+{% highlight csharp %}
+// Define any namespace
+using System;
+using System.IO;
+
+// In CS9 you can write in the Top-level
+// below is the entry point
+
+// C# is a Java like language that is closer to Kotlin.
+
+/* namespace program
+ * {
+ *     public class myclass
+ *     {
+ *         static void main()
+ *         {
+ *              Function();
+ *         }
+ *     }
+ * }
+ */
+
+// Ask how many A's should be written
+// and the name of the file
+
+Console.WriteLine("How many 'A' should be written to a file: ");
+string num = Console.ReadLine();
+
+// set varables
+int newnum = 0;
+
+// Fast Parsing without quiting
+while (!int.TryParse(num, out newnum))
+{
+    Console.WriteLine("Please enter a positive number:");
+    num = Console.ReadLine();
+}
+
+Console.WriteLine("What is the name for the file:");
+string filename = Console.ReadLine();
+
+// Get directory and add the file name
+string currentDirName = Directory.GetCurrentDirectory();
+string pathString = Path.Combine(currentDirName, filename);
+
+// Create a file and write to it then close it
+using (FileStream fs = File.Create(pathString))
+{
+
+    for (int i = 0; i < newnum; i++)
+    {
+        fs.WriteByte((byte)'A');
+    }
+}
+
+// If previous operation completed then press any key to exit
+Console.WriteLine("Operation Complete. Press any key to exit.");
+Console.ReadKey();
+}
+{% endhighlight %}
+
 ## Java
 
-{% highlight java linenos=table %}
+{% highlight java %}
 // Define the project as a package to use in other java projects
 package io.Printchara;
 
@@ -184,7 +247,7 @@ public class Main {
 
 ## Kotlin
 
-{% highlight kotlin linenos=table %}
+{% highlight kotlin %}
 // Kotlin is compatible with Java
 // Import modules if needed
 import java.io.File
@@ -237,7 +300,7 @@ fun main() {
 
 ## Python
 
-{% highlight py linenos=table %}
+{% highlight python %}
 # Define modules if needed
 # Python does not need an entry point below is the main
 # if **name** == "**main**":
@@ -268,73 +331,9 @@ print("Operation Completed. Press Enter to exit.")
 input()
 {% endhighlight %}
 
-## C#
-
-{% highlight c# linenos=table %}
-// Define any namespace
-using System;
-using System.IO;
-
-// In CS9 you can write in the Top-level
-// below is the entry point
-
-// C# is a Java like language that is closer to Kotlin.
-
-/* namespace program
- * {
- *     public class myclass
- *     {
- *         static void main()
- *         {
- *              Function();
- *         }
- *     }
- * }
- */
-
-// Ask how many A's should be written
-// and the name of the file
-
-Console.WriteLine("How many 'A' should be written to a file: ");
-string num = Console.ReadLine();
-
-// set varables
-int newnum = 0;
-
-// Fast Parsing without quiting
-while (!int.TryParse(num, out newnum))
-{
-    Console.WriteLine("Please enter a positive number:");
-    num = Console.ReadLine();
-}
-
-Console.WriteLine("What is the name for the file:");
-string filename = Console.ReadLine();
-
-// Get directory and add the file name
-string currentDirName = Directory.GetCurrentDirectory();
-string pathString = Path.Combine(currentDirName, filename);
-
-// Create a file and write to it then close it
-using (FileStream fs = File.Create(pathString))
-{
-
-    for (int i = 0; i < newnum; i++)
-    {
-        fs.WriteByte((byte)'A');
-    }
-}
-
-
-// If previous operation completed then press any key to exit
-Console.WriteLine("Operation Complete. Press any key to exit.");
-Console.ReadKey();
-}
-{% endhighlight %}
-
 ## Visual Basic
 
-{% highlight vb linenos=table %}
+{% highlight visualbasic %}
 ' Define any namespace
 Imports System
 Imports System.IO
@@ -389,7 +388,7 @@ End Module
 
 ## Rust
 
-{% highlight rs linenos=table %}
+{% highlight rust %}
 // import namespace of needed
 use std::io;
 use std::path::Path;
@@ -445,7 +444,7 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 
 ## D
 
-{% highlight d linenos=table %}
+{% highlight dlang %}
 // Import the standard library components
 // This is the similar to c/c++ and alike
 // languages
@@ -483,9 +482,9 @@ void main()
 ## Fortran
 
 For Fortran 90 may be compatible with later fortran.
-This is in Fortan 2008 highlighting.
+This is in Fortran 2008 highlighting.
 
-{% highlight fortan linenos=table %}
+{% highlight fortran %}
 ! Entry Point
 ! This is similar to Pascal
 program Printchara
@@ -519,7 +518,7 @@ end program Printchara
 
 ## Dart
 
-{% highlight dart linenos=table %}
+{% highlight dart %}
 // import modules if needed
 import 'dart:core';
 import 'dart:io';
