@@ -31,7 +31,7 @@ This is page for the snippets shown in .
 Linux ISO C compatible for the download.
 This is for Windows.
 
-{% highlight c linenos=table %}
+{% highlight c linenos %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 
 ## C++
 
-{% highlight cpp linenos=table %}
+{% highlight cpp linenos %}
 // Define any preprocessor header files
 #include <iostream>
 #include <fstream>
@@ -123,7 +123,7 @@ int main(int argc, char **argv)
 
 ## Java
 
-{% highlight java linenos=table %}
+{% highlight java linenos %}
 // Define the project as a package to use in other java projects
 package io.Printchara;
 
@@ -185,7 +185,7 @@ public class Main {
 
 ## Kotlin
 
-{% highlight kotlin linenos=table %}
+{% highlight kotlin linenos %}
 // Kotlin is compatible with Java
 // Import modules if needed
 import java.io.File
@@ -238,7 +238,7 @@ fun main() {
 
 ## Python
 
-{% highlight py linenos=table %}
+{% highlight py linenos %}
 # Define modules if needed
 # Python does not need an entry point below is the main
 # if **name** == "**main**":
@@ -271,7 +271,7 @@ input()
 
 ## C#
 
-{% highlight c# linenos=table %}
+{% highlight c# linenos %}
 // Define any namespace
 using System;
 using System.IO;
@@ -335,7 +335,7 @@ Console.ReadKey();
 
 ## Visual Basic
 
-{% highlight vb linenos=table %}
+{% highlight vb linenos %}
 ' Define any namespace
 Imports System
 Imports System.IO
@@ -390,7 +390,7 @@ End Module
 
 ## Rust
 
-{% highlight rs linenos=table %}
+{% highlight rs linenos %}
 // import namespace of needed
 use std::io;
 use std::path::Path;
@@ -446,7 +446,7 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 
 ## D
 
-{% highlight d linenos=table %}
+{% highlight d linenos %}
 // Import the standard library components
 // This is the similar to c/c++ and alike
 // languages
@@ -486,7 +486,7 @@ void main()
 For Fortran 90 may be compatible with later fortran.
 This is in Fortan 2008 highlighting.
 
-{% highlight fortan linenos=table %}
+{% highlight fortan linenos %}
 ! Entry Point
 ! This is similar to Pascal
 program Printchara
@@ -520,7 +520,7 @@ end program Printchara
 
 ## Dart
 
-{% highlight dart linenos=table %}
+{% highlight dart linenos %}
 // import modules if needed
 import 'dart:core';
 import 'dart:io';
