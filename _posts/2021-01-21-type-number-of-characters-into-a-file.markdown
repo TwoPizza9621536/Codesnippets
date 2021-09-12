@@ -300,7 +300,7 @@ fun main() {
 
 ## Python
 
-{% highlight python %}
+{% highlight python linenos %}
 # Define modules if needed
 # Python does not need an entry point below is the main
 # if **name** == "**main**":
