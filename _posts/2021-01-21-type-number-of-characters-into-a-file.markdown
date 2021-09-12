@@ -30,7 +30,7 @@ This is page for the snippets shown in .
 The download is for Linux.
 The snippet below is for Windows.
 
-{% highlight c %}
+{% highlight c linenos %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 
 ## C++
 
-{% highlight cpp %}
+{% highlight cpp linenos %}
 // Define any preprocessor header files
 #include <iostream>
 #include <fstream>
@@ -122,7 +122,7 @@ int main(int argc, char **argv)
 
 ## C#
 
-{% highlight csharp %}
+{% highlight csharp linenos %}
 // Define any namespace
 using System;
 using System.IO;
@@ -185,7 +185,7 @@ Console.ReadKey();
 
 ## Java
 
-{% highlight java %}
+{% highlight java linenos %}
 // Define the project as a package to use in other java projects
 package io.Printchara;
 
@@ -247,7 +247,7 @@ public class Main {
 
 ## Kotlin
 
-{% highlight kotlin %}
+{% highlight kotlin linenos %}
 // Kotlin is compatible with Java
 // Import modules if needed
 import java.io.File
@@ -333,7 +333,7 @@ input()
 
 ## Visual Basic
 
-{% highlight visualbasic %}
+{% highlight visualbasic linenos %}
 ' Define any namespace
 Imports System
 Imports System.IO
@@ -388,7 +388,7 @@ End Module
 
 ## Rust
 
-{% highlight rust %}
+{% highlight rust linenos %}
 // import namespace of needed
 use std::io;
 use std::path::Path;
@@ -444,7 +444,7 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 
 ## D
 
-{% highlight dlang %}
+{% highlight dlang linenos %}
 // Import the standard library components
 // This is the similar to c/c++ and alike
 // languages
@@ -484,7 +484,7 @@ void main()
 For Fortran 90 may be compatible with later fortran.
 This is in Fortran 2008 highlighting.
 
-{% highlight fortran %}
+{% highlight fortran linenos %}
 ! Entry Point
 ! This is similar to Pascal
 program Printchara
@@ -518,7 +518,7 @@ end program Printchara
 
 ## Dart
 
-{% highlight dart %}
+{% highlight dart linenos %}
 // import modules if needed
 import 'dart:core';
 import 'dart:io';
