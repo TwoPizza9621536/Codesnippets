@@ -17,7 +17,6 @@ tags:
   - Rust
 categories:
   - Languages
-  - Programming Languages
   - Programming
   - Comparison
 toc: true
@@ -27,10 +26,10 @@ This is page for the snippets shown in .
 
 ## C
 
-The download is for Linux.
+The download file is for Linux.
 The snippet below is for Windows.
 
-{% highlight c linenos %}
+{% highlight c linenos filename="Printchara.c" %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
@@ -73,7 +72,7 @@ int main(int argc, char **argv)
 
 ## C++
 
-{% highlight cpp linenos %}
+{% highlight cpp linenos filename="Printchara.cpp" %}
 // Define any preprocessor header files
 #include <iostream>
 #include <fstream>
@@ -122,7 +121,7 @@ int main(int argc, char **argv)
 
 ## C#
 
-{% highlight csharp linenos %}
+{% highlight csharp linenos filename="Printchara.cs" %}
 // Define any namespace
 using System;
 using System.IO;
@@ -185,7 +184,7 @@ Console.ReadKey();
 
 ## Java
 
-{% highlight java linenos %}
+{% highlight java linenos filename="Printchara.java" %}
 // Define the project as a package to use in other java projects
 package io.Printchara;
 
@@ -247,7 +246,7 @@ public class Main {
 
 ## Kotlin
 
-{% highlight kotlin linenos %}
+{% highlight kotlin linenos filename="Printchara.kt" %}
 // Kotlin is compatible with Java
 // Import modules if needed
 import java.io.File
@@ -300,7 +299,7 @@ fun main() {
 
 ## Python
 
-{% highlight python linenos %}
+{% highlight python linenos filename="Printchara.py" %}
 # Define modules if needed
 # Python does not need an entry point below is the main
 # if **name** == "**main**":
@@ -333,7 +332,7 @@ input()
 
 ## Visual Basic
 
-{% highlight visualbasic linenos %}
+{% highlight visualbasic linenos filename="Printchara.vb" %}
 ' Define any namespace
 Imports System
 Imports System.IO
@@ -388,7 +387,7 @@ End Module
 
 ## Rust
 
-{% highlight rust linenos %}
+{% highlight rust linenos filename="Printchara.rs" %}
 // import namespace of needed
 use std::io;
 use std::path::Path;
@@ -444,7 +443,7 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 
 ## D
 
-{% highlight dlang linenos %}
+{% highlight dlang linenos filename="Printchara.d" %}
 // Import the standard library components
 // This is the similar to c/c++ and alike
 // languages
@@ -484,7 +483,7 @@ void main()
 For Fortran 90 may be compatible with later fortran.
 This is in Fortran 2008 highlighting.
 
-{% highlight fortran linenos %}
+{% highlight fortran linenos filename="Printchara.f90" %}
 ! Entry Point
 ! This is similar to Pascal
 program Printchara
@@ -518,7 +517,7 @@ end program Printchara
 
 ## Dart
 
-{% highlight dart linenos %}
+{% highlight dart linenos filename="Printchara.dart" %}
 // import modules if needed
 import 'dart:core';
 import 'dart:io';
