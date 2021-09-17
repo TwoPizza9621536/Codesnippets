@@ -2,22 +2,24 @@
 layout: post
 title: Type Number of Characters Into A File
 date: 2021-01-21 16:28:19 -0500
-moddate: 2021-09-11 16:17:58 -0500
+moddate: 2021-09-17 19:52:50 -0400
 tags:
   - C
   - C++
   - C#
-  - Python
+  - D
+  - Dart
+  - Fortran
   - Java
   - Kotlin
-  - Visual Basic
-  - D
-  - Fortran
-  - Dart
+  - Python
   - Rust
+  - Ruby
+  - Visual Basic
 categories:
-  - Languages
+  - Scripting
   - Programming
+  - Languages
   - Comparison
 toc: true
 ---
@@ -29,7 +31,7 @@ This is page for the snippets shown in .
 The download file is for Linux.
 The snippet below is for Windows.
 
-{% highlight c filename="Printchara.c" linenos %}
+{% highlight c linenos %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,7 +74,7 @@ int main(int argc, char **argv)
 
 ## C++
 
-{% highlight cpp filename="Printchara.cpp" linenos %}
+{% highlight cpp linenos %}
 // Define any preprocessor header files
 #include <iostream>
 #include <fstream>
@@ -121,7 +123,7 @@ int main(int argc, char **argv)
 
 ## C#
 
-{% highlight csharp filename="Printchara.cs" linenos %}
+{% highlight csharp linenos %}
 // Define any namespace
 using System;
 using System.IO;
@@ -182,9 +184,123 @@ Console.ReadKey();
 }
 {% endhighlight %}
 
+## D
+
+{% highlight dlang linenos %}
+// Import the standard library components
+// This is the similar to c/c++ and alike
+// languages
+import std.stdio;
+import std.string;
+import std.file;
+
+void main()
+{
+    // Set variables
+    int num = 0;
+    string filename;
+
+    // Ask how many A's should be written
+    // and the name of the file
+    writeln("How many 'A' should be written to a file: ");
+    readf(" %d\n", &num);
+
+    writeln("What is the name for the file: ");
+    readf(" %s\n", &filename);
+
+    // Create a file and write to it then close it
+    File file = File(filename, "w");
+
+    for (int i = 0; i < num; i++)
+    {
+        file.write('A');
+    }
+
+    writeln("Operation Completed. Press Enter to exit.");
+    readln();
+}
+{% endhighlight %}
+
+## Dart
+
+{% highlight dart linenos %}
+// import modules if needed
+import 'dart:core';
+import 'dart:io';
+
+// uncomment this to run it
+// import 'package:print_chara/print_chara.dart' as print_chara;
+
+// Entry point
+void main() {
+    // Ask how many A's should be written
+    // and the name of the file
+    // Dart is C and javascript like language.
+
+    print("How many 'A' should be written to a file: ");
+    var num = stdin.readLineSync();
+
+    var newnum = int.parse(num!);
+    assert(newnum is int);
+
+    print('What is the name for the file: ');
+    var filename = stdin.readLineSync();
+
+    // Create a file and write to it then close it
+    // The writing process is similar to Java/Kotlin
+    var file = File(filename!);
+    var stream = file.openWrite();
+    for (var i = 0; i < newnum; i++) {
+        stream.writeCharCode(65);
+    }
+    stream.close();
+
+    // If previous operation completed then press any key to exit
+    print('Complete. Press Enter to exit.');
+    stdin.readLineSync();
+}
+{% endhighlight %}
+
+## Fortran
+
+For Fortran 90 may be compatible with later fortran.
+This is in Fortran 2008 highlighting.
+
+{% highlight fortran linenos %}
+! Entry Point
+! This is similar to Pascal
+program Printchara
+    implicit none
+
+    ! Declare variables
+    INTEGER :: num
+    INTEGER :: i
+    CHARACTER(24) :: filename
+
+    ! Ask how many 'A' should be written
+    ! and the name of the file
+    PRINT *, "How many 'A' should be written to a file: "
+    READ(*,*) num
+
+    PRINT *, "What is the name for the file: (Must be 20 characters excluding .txt): "
+    READ(*,*) filename
+
+    ! Create a file and write to it then close it
+    OPEN(1, file = filename)
+    do i = 0, num
+        WRITE(1, "(A)", advance='no') 'A'
+    end do
+    CLOSE(1)
+
+    ! If previous operation completed then press Enter to exit
+    PRINT *, "Operation Complete. Press Enter to exit."
+    READ(*,*)
+end program Printchara
+{% endhighlight %}
+
 ## Java
 
-{% highlight java filename="Printchara.java" linenos %}
+{% highlight java linenos %}
 // Define the project as a package to use in other java projects
 package io.Printchara;
 
@@ -246,7 +362,7 @@ public class Main {
 
 ## Kotlin
 
-{% highlight kotlin filename="Printchara.kt" linenos %}
+{% highlight kotlin linenos %}
 // Kotlin is compatible with Java
 // Import modules if needed
 import java.io.File
@@ -299,11 +415,13 @@ fun main() {
 
 ## Python
 
-{% highlight python filename="Printchara.py" linenos %}
+{% highlight python linenos %}
 # Define modules if needed
-# Python does not need an entry point below is the main
-# if **name** == "**main**":
 
+# Python does not need an entry point becuase it is both 
+# a scripting language and programming language
+# below is the entry point
+# if __name__ == "__main__":
 # execute only if run as a script
 # name()
 
@@ -322,72 +440,74 @@ for i in range (int(num)):
 f.write('A')
 i = i + 1
 
-f.close()
-
 # If previous operation completed then press Enter to exit
 
 print("Operation Completed. Press Enter to exit.")
 input()
 {% endhighlight %}
 
-## Visual Basic
+## Ruby
 
-{% highlight visualbasic filename="Printchara.vb" linenos %}
-' Define any namespace
-Imports System
-Imports System.IO
+{% highlight ruby linenos %}
+#!/usr/bin/env ruby
+# encoding: utf-8
+# SPDX-FileCopyrightText: Copyright (c) 2021 Sam W
+# SPDX-License-Identifier: MIT
+=begin
+Copyright (c) 2021 Sam W
 
-''' <summery>
-''' Visual Basic .Net is almost compatible with C#.
-''' The syntax is Visual Basic 6.0 but all of the
-''' functions are from the .Net framework.
-''' Entry Point similar to Pascal and Fortran.
-''' VB is based on Basic if you did not notice already
-''' which has an Entry Point that is similar to the
-''' two programing languages above.
-''' </summery>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-' Entry Point
-Module Printchara
-    Sub Main()
-        ' Ask how many 'A' should be written
-        ' and the name of the file
-        Console.WriteLine("How many 'A' should be written to a file: ")
-        Dim num As String = Console.ReadLine()
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-        ' Set variables
-        Dim newnum As Integer = 0
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+=end
 
-        ' Fast Parsing without quiting
-        While Not Integer.TryParse(num, newnum)
-            Console.WriteLine("Please enter a positive number: ")
-            num = Console.ReadLine()
-        End While
+# Define modules if needed
 
-        Console.WriteLine("What is the name for the file: ")
-        Dim filename As String = Console.ReadLine()
+# Ruby does not need an entry point becuase it is both
+# a scripting language and programming language like Python
 
-        ' Get directory and add the file name
-        Dim currentDirName As String = Directory.GetCurrentDirectory()
-        Dim pathString As String = Path.Combine(currentDirName, filename)
+# Ask how many A's should be written
+# and the name of the file
 
-        ' Create a file and write to it then close it
-        Using fs As Filestream = File.Create(pathString)
-            For i As Integer = 0 To newnum
-                fs.WriteByte(Convert.ToByte("A"))
-            Next i
-        End Using
+# Make STDOUT flush every time
+STDOUT.sync = :yes
 
-        ' If previous operation completed then press any key to exit
-        Console.WriteLine("Operation Complete. Press any key to exit.")
-        Console.ReadKey()
-    End Sub
-End Module
+puts "How many 'A' should be written to a file: "
+num = gets.chomp
+newnum = num.to_i
+
+puts "What is the name for the file: "
+filename = gets.chomp
+
+File.open(filename, 'w') do |f|
+  i = 0
+  while i < newnum
+    f.print "A"
+    i += 1
+  end
+end
+
+puts "Operation Completed. Press Enter to exit."
+gets.chomp
 {% endhighlight %}
 
 ## Rust
 
-{% highlight rust filename="Printchara.rs" linenos %}
+{% highlight rust linenos %}
 // import namespace of needed
 use std::io;
 use std::path::Path;
@@ -441,116 +561,58 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 }
 {% endhighlight %}
 
-## D
+## Visual Basic
 
-{% highlight dlang filename="Printchara.d" linenos %}
-// Import the standard library components
-// This is the similar to c/c++ and alike
-// languages
-import std.stdio;
-import std.string;
-import std.file;
+{% highlight visualbasic linenos %}
+' Define any namespace
+Imports System
+Imports System.IO
 
-void main()
-{
-    // Set variables
-    int num = 0;
-    string filename;
+''' <summery>
+''' Visual Basic .Net is almost compatible with C#.
+''' The syntax is Visual Basic 6.0 but all of the
+''' functions are from the .Net framework.
+''' Entry Point similar to Pascal and Fortran.
+''' VB is based on Basic if you did not notice already
+''' which has an Entry Point that is similar to the
+''' two programing languages above.
+''' </summery>
 
-    // Ask how many A's should be written
-    // and the name of the file
-    writeln("How many 'A' should be written to a file: ");
-    readf(" %d\n", &num);
+' Entry Point
+Module Printchara
+    Sub Main()
+        ' Ask how many 'A' should be written
+        ' and the name of the file
+        Console.WriteLine("How many 'A' should be written to a file: ")
+        Dim num As String = Console.ReadLine()
 
-    writeln("What is the name for the file: ");
-    readf(" %s\n", &filename);
+        ' Set variables
+        Dim newnum As Integer = 0
 
-    // Create a file and write to it then close it
-    File file = File(filename, "w");
+        ' Fast Parsing without quiting
+        While Not Integer.TryParse(num, newnum)
+            Console.WriteLine("Please enter a positive number: ")
+            num = Console.ReadLine()
+        End While
 
-    for (int i = 0; i < num; i++)
-    {
-        file.write('A');
-    }
+        Console.WriteLine("What is the name for the file: ")
+        Dim filename As String = Console.ReadLine()
 
-    writeln("Operation Completed. Press Enter to exit.");
-    readln();
-}
+        ' Get directory and add the file name
+        Dim currentDirName As String = Directory.GetCurrentDirectory()
+        Dim pathString As String = Path.Combine(currentDirName, filename)
+
+        ' Create a file and write to it then close it
+        Using fs As Filestream = File.Create(pathString)
+            For i As Integer = 0 To newnum
+                fs.WriteByte(Convert.ToByte("A"))
+            Next i
+        End Using
+
+        ' If previous operation completed then press any key to exit
+        Console.WriteLine("Operation Complete. Press any key to exit.")
+        Console.ReadKey()
+    End Sub
+End Module
 {% endhighlight %}
 
-## Fortran
-
-For Fortran 90 may be compatible with later fortran.
-This is in Fortran 2008 highlighting.
-
-{% highlight fortran filename="Printchara.f90" linenos %}
-! Entry Point
-! This is similar to Pascal
-program Printchara
-    implicit none
-
-    ! Declare variables
-    INTEGER :: num
-    INTEGER :: i
-    CHARACTER(24) :: filename
-
-    ! Ask how many 'A' should be written
-    ! and the name of the file
-    PRINT *, "How many 'A' should be written to a file: "
-    READ(*,*) num
-
-    PRINT *, "What is the name for the file: (Must be 20 characters excluding .txt): "
-    READ(*,*) filename
-
-    ! Create a file and write to it then close it
-    OPEN(1, file = filename)
-    do i = 0, num
-        WRITE(1, "(A)", advance='no') 'A'
-    end do
-    CLOSE(1)
-
-    ! If previous operation completed then press Enter to exit
-    PRINT *, "Operation Complete. Press Enter to exit."
-    READ(*,*)
-end program Printchara
-{% endhighlight %}
-
-## Dart
-
-{% highlight dart linenos filename="Printchara.dart" %}
-// import modules if needed
-import 'dart:core';
-import 'dart:io';
-
-// uncomment this to run it
-// import 'package:print_chara/print_chara.dart' as print_chara;
-
-// Entry point
-void main() {
-    // Ask how many A's should be written
-    // and the name of the file
-    // Dart is C and javascript like language.
-
-    print("How many 'A' should be written to a file: ");
-    var num = stdin.readLineSync();
-
-    var newnum = int.parse(num!);
-    assert(newnum is int);
-
-    print('What is the name for the file: ');
-    var filename = stdin.readLineSync();
-
-    // Create a file and write to it then close it
-    // The writing process is similar to Java/Kotlin
-    var file = File(filename!);
-    var stream = file.openWrite();
-    for (var i = 0; i < newnum; i++) {
-        stream.writeCharCode(65);
-    }
-    stream.close();
-
-    // If previous operation completed then press any key to exit
-    print('Complete. Press Enter to exit.');
-    stdin.readLineSync();
-}
-{% endhighlight %}
