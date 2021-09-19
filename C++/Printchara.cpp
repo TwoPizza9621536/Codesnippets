@@ -66,7 +66,8 @@ int main(int argc, char **argv)
     file.close();
 
     // If previous operation completed then press any key to exit
-    cout << "Operation Completed. Press Enter to exit.";
+    cout << "Operation Completed. Press any key to exit." << endl;
+    cin.ignore();
     cin.get();
 
     return 0;

@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     scanf("%d", &num);
 
     printf("What is the name for the file: (Must be 24 characters): \n");
-    scanf("%23s", filename);
+    scanf("%24s", filename);
 
     // Create a file and write to it then close it
     FILE *fptr;
@@ -56,7 +56,10 @@ int main(int argc, char **argv)
     // If previous operation completed then press any key to exit
     printf("Operation Completed. Press Enter to exit.\n");
     fflush(stdout);
-    while (getchar() != '\n');
+    while (getchar() != '\n')
+    {
+        getchar();
+    }
 
     return 0;
 }
