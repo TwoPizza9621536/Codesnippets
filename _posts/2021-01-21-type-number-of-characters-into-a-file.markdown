@@ -2,7 +2,7 @@
 layout: post
 title: Type Number of Characters Into A File
 date: 2021-01-21 16:28:19 -0500
-moddate: 2021-09-19 10:30:58 -0400
+moddate: 2021-09-19 11:06:18 -0400
 tags:
   - C
   - C++
@@ -42,7 +42,7 @@ This is page for the snippets shown in .
 ## C
 
 File:
-[Printchara.c]({{ site.github.repository_url }}{{ page.urls[1] }})
+[Printchara.c]({{ site.github.repository_url }}{{ page.urls[0] }})
 
 {% highlight c linenos %}
 // Define any preprocessor header files
@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 ## C++
 
 File:
-[Printchara.cpp]({{ site.github.repository_url }}{{ page.urls[2] | excape }})
+[Printchara.cpp]({{ site.github.repository_url }}{{ page.urls[1] | excape }})
 
 {% highlight cpp linenos %}
 // Define any preprocessor header files
@@ -144,7 +144,7 @@ int main(int argc, char **argv)
 ## C#
 
 File:
-[Printchara.cs]({{ site.github.repository_url }}{{ page.urls[3] | excape }})
+[Printchara.cs]({{ site.github.repository_url }}{{ page.urls[2] | excape }})
 
 {% highlight csharp linenos %}
 // Define any namespace
@@ -210,7 +210,7 @@ Console.ReadKey();
 ## D
 
 File:
-[Printchara.d]({{ site.github.repository_url }}{{ page.urls[4] }})
+[Printchara.d]({{ site.github.repository_url }}{{ page.urls[3] }})
 
 {% highlight dlang linenos %}
 // Import the standard library components
@@ -250,7 +250,7 @@ void main()
 ## Dart
 
 File:
-[Printchara.dart]({{ site.github.repository_url }}{{ page.urls[5] }})
+[Printchara.dart]({{ site.github.repository_url }}{{ page.urls[4] }})
 
 {% highlight dart linenos %}
 // import modules if needed
@@ -293,7 +293,7 @@ void main() {
 ## Fortran
 
 File:
-[Printchara.f90]({{ site.github.repository_url }}{{ page.urls[6] }})
+[Printchara.f90]({{ site.github.repository_url }}{{ page.urls[5] }})
 
 For Fortran 90 may be compatible with later fortran.
 This is in Fortran 2008 highlighting.
@@ -333,7 +333,7 @@ end program Printchara
 ## Java
 
 File:
-[Printchara.java]({{ site.github.repository_url }}{{ page.urls[7] }})
+[Printchara.java]({{ site.github.repository_url }}{{ page.urls[6] }})
 
 {% highlight java linenos %}
 // Define the project as a package to use in other java projects
@@ -398,7 +398,7 @@ public class Main {
 ## Kotlin
 
 File:
-[Printchara.kt]({{ site.github.repository_url }}{{ page.urls[8] }})
+[Printchara.kt]({{ site.github.repository_url }}{{ page.urls[7] }})
 
 {% highlight kotlin linenos %}
 // Kotlin is compatible with Java
@@ -454,12 +454,12 @@ fun main() {
 ## Python
 
 File:
-[Printchara.py]({{ site.github.repository_url }}{{ page.urls[9] }})
+[Printchara.py]({{ site.github.repository_url }}{{ page.urls[8] }})
 
 {% highlight python linenos %}
 # Define modules if needed
 
-# Python does not need an entry point becuase it is both 
+# Python does not need an entry point becuase it is both
 # a scripting language and programming language
 # below is the entry point
 # if __name__ == "__main__":
@@ -490,7 +490,7 @@ input()
 ## Ruby
 
 File:
-[Printchara.rb]({{ site.github.repository_url }}{{ page.urls[10] }})
+[Printchara.rb]({{ site.github.repository_url }}{{ page.urls[9] }})
 
 {% highlight ruby linenos %}
 # Define modules if needed
@@ -526,7 +526,7 @@ gets.chomp
 ## Rust
 
 File:
-[Printchara.rs]({{ site.github.repository_url }}{{ page.urls[11] }})
+[Printchara.rs]({{ site.github.repository_url }}{{ page.urls[10] }})
 
 {% highlight rust linenos %}
 // import namespace of needed
@@ -585,7 +585,7 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 ## Visual Basic
 
 File:
-[Printchara.vb]({{ site.github.repository_url }}{{ page.urls[12] }})
+[Printchara.vb]({{ site.github.repository_url }}{{ page.urls[11] }})
 
 {% highlight visualbasic linenos %}
 ' Define any namespace
