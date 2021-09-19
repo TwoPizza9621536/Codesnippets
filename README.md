@@ -1,7 +1,7 @@
 # snippets
 
 Code examples and snippets for (twopizza9621536.github.io).
-To see the website is under CC BY-SA 4.0, [click here to learn more][1].
+To see the website, [click here][1].
 
 # License
 

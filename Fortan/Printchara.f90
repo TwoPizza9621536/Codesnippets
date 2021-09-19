@@ -35,7 +35,7 @@ program Printchara
     PRINT *, "How many 'A' should be written to a file: "
     READ(*,*) num
 
-    PRINT *, "What is the name for the file: (Must be 20 characters excluding .txt): "
+    PRINT *, "What is the name for the file: (Must be 24 characters): "
     READ(*,*) filename
 
     ! Create a file and write to it then close it

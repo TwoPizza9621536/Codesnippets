@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- encoding: utf-8 -*-
 # SPDX-FileCopyrightText: Copyright (c) 2021 Sam W
 # SPDX-License-Identifier: MIT
 """
@@ -24,7 +26,9 @@ IN THE SOFTWARE.
 
 # Define modules if needed
 
-# Python does not need an entry point below is the main
+# Python does not need an entry point because it is both
+# a scripting language and programming language
+# below is the main slash entry point
 
 # if __name__ == "__main__":
 # execute only if run as a script
@@ -44,8 +48,6 @@ with open(filename, 'w+') as f:
     for i in range(int(num)):
         f.write('A')
         i = i + 1
-
-f.close()
 
 # If previous operation completed then press Enter to exit
 print("Operation Completed. Press Enter to exit.")

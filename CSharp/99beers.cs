@@ -1,8 +1,8 @@
 using System;
 
-namespace CSharp
+namespace ninetyNineBeers
 {
-    class Program
+    class ninetyNineBeers
     {
         static int bottles = 99;
 
@@ -17,9 +17,9 @@ namespace CSharp
             while (bottles != 0)
             {
                 bool ifWaste = false;
-                while (1 < bottles || bottles <= -1)
+                while (bottles > 1 || bottles <= -1)
                 {
-                    verse (bottles);
+                    verse(bottles);
                     bottles--;
                 }
 
@@ -39,7 +39,7 @@ namespace CSharp
                     Console.WriteLine("Take one down and pass it around.");
                 }
 
-                bottles = ending(bottles, ifWaste);
+                bottles = Endings.ending(bottles, ifWaste);
             }
         }
 
@@ -72,8 +72,11 @@ namespace CSharp
             verse(0);
             return -1;
         }
+    }
 
-        static int ending(int bottles, bool waste)
+    class Endings
+    {
+        static int endingPartOne(int bottles, bool waste)
         {
             if (random() == 100 && bottles == 1)
             {
@@ -101,31 +104,36 @@ namespace CSharp
 
                 Console.WriteLine("No more bottles of beer on the wall,");
                 Console.WriteLine("no more bottles of beer.");
-                if (random() <= 60)
+            }
+
+            return endingPartTwo();
+        }
+
+        static int endingPartTwo()
+        {
+            if (random() <= 60)
+            {
+                bottles = 0;
+                if (random() <= 10)
                 {
-                    bottles = 0;
-                    if (random() <= 10)
-                    {
-                        Console.WriteLine("There's nothing else to fall,");
-                        Console.Write("because there's no more bottles of ");
-                        Console.WriteLine("beer on the wall.\n");
-                    }
-                    else
-                    {
-                        Console.Write("We've taken them down and passed them");
-                        Console.WriteLine("around;");
-                        Console.WriteLine("now we're drunk and passed out!\n");
-                    }
+                    Console.WriteLine("There's nothing else to fall,");
+                    Console.Write("because there's no more bottles of ");
+                    Console.WriteLine("beer on the wall.\n");
                 }
                 else
                 {
-                    bottles = 99;
-                    Console.WriteLine("Go to the store and buy some more,");
-                    Console.Write($"{bottles} bottles of beer on the");
-                    Console.WriteLine("wall.\n");
+                    Console.Write("We've taken them down and passed them");
+                    Console.WriteLine("around;");
+                    Console.WriteLine("now we're drunk and passed out!\n");
                 }
             }
-
+            else
+            {
+                bottles = 99;
+                Console.WriteLine("Go to the store and buy some more,");
+                Console.Write($"{bottles} bottles of beer on the");
+                Console.WriteLine("wall.\n");
+            }
             return bottles;
         }
     }

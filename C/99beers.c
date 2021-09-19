@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <time.h>
+#include <sys/types.h>
 
 int bottles = 99;
 
 long random()
 {
-  srand(time(0));
-  return (rand() % 100) + 1;
+  return (rand() % 101);
 }
 
 void verse(int bottles)
 {
+  srand(getpid());
   printf("%d bottles of beer on the wall,\n", bottles);
   printf("%d bottles of beer.\n", bottles);
   if (random() > 80)
@@ -38,7 +38,32 @@ int infiniteBottles()
   return -1;
 }
 
-int ending(int bottles, bool waste)
+int endingPartTwo()
+{
+  if (random() <= 60)
+  {
+    bottles = 0;
+    if (random() <= 10)
+    {
+      printf("There's nothing else to fall,\n");
+      printf("because there is no more bottle of beer left on the wall.\n\n");
+    }
+    else
+    {
+      printf("We've taken them down and passed them around;\n");
+      printf("now we're drunk and passed out!\n\n");
+    }
+  }
+  else
+  {
+    bottles = 99;
+    printf("Go the the store and buy some more,\n");
+    printf("%d bottles of beer on the wall.\n\n", bottles);
+  }
+  return bottles;
+}
+
+int endingPartOne(int bottles, bool waste)
 {
   if ((random() == 100) && (bottles == 1))
   {
@@ -65,29 +90,9 @@ int ending(int bottles, bool waste)
 
     printf("No more bottles of beer on the wall,\n");
     printf("No more bottles of beer.\n");
-    if (random() <= 60)
-    {
-      bottles = 0;
-      if (random() <= 10)
-      {
-        printf("There's nothing else to fall,\n");
-        printf("because there is no more bottle of beer left on the wall.\n\n");
-      }
-      else
-      {
-        printf("We've taken them down and passed them around;\n");
-        printf("now we're drunk and passed out!\n\n");
-      }
-    }
-    else
-    {
-      bottles = 99;
-      printf("Go the the store and buy some more,\n");
-      printf("%d bottles of beer on the wall.\n\n", bottles);
-    }
   }
 
-  return bottles;
+  return endingPartTwo();
 }
 
 int main()

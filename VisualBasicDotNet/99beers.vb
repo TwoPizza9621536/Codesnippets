@@ -27,7 +27,7 @@ Module Program
                 Console.WriteLine("Take one down and pass it around.")
             End If
 
-            bottles = ending(bottles, ifWaste)
+            bottles = endingPartOne(bottles, ifWaste)
         End While
     End Sub
 
@@ -54,7 +54,7 @@ Module Program
         return -1
     End Function
 
-    Function ending(bottles As Integer, waste As Boolean)
+    Function endingPartOne(bottles As Integer, waste As Boolean)
         If randomNum() = 100 And bottles = 1 Then
             If waste Then
                 Console.WriteLine("what a waste of alcohol!")
@@ -73,30 +73,33 @@ Module Program
                 Console.WriteLine("No more bottles of beer on the wall.")
                 Console.WriteLine()
             End If
+        End If
+        return endingPartTwo()
+    End Function
 
-            Console.WriteLine("No more bottles of beer on the wall,")
-            Console.WriteLine("no more bottles of beer.")
-            If randomNum() <= 60 Then
-                bottles = 0
-                If randomNum() <= 10 Then
-                    Console.WriteLine("There's nothing else to fall,")
-                    Console.Write("because there's no more bottles of beer on ")
-                    Console.WriteLine("the wall.")
-                    Console.WriteLine()
-                Else
-                    Console.Write("We've taken them down and passed them")
-                    Console.WriteLine("around;")
-                    Console.WriteLine("now we're drunk and passed out!")
-                    Console.WriteLine()
-                End If
+    Function endingPartTwo()
+        Console.WriteLine("No more bottles of beer on the wall,")
+        Console.WriteLine("no more bottles of beer.")
+        If randomNum() <= 60 Then
+            bottles = 0
+            If randomNum() <= 10 Then
+                Console.WriteLine("There's nothing else to fall,")
+                Console.Write("because there's no more bottles of beer on ")
+                Console.WriteLine("the wall.")
+                Console.WriteLine()
             Else
-                bottles = 99
-                Console.WriteLine("Go to the store and buy some more,")
-                Console.WriteLine($"{bottles} bottles of beer on the wall.")
+                Console.Write("We've taken them down and passed them")
+                Console.WriteLine("around;")
+                Console.WriteLine("now we're drunk and passed out!")
                 Console.WriteLine()
             End If
+        Else
+            bottles = 99
+            Console.WriteLine("Go to the store and buy some more,")
+            Console.WriteLine($"{bottles} bottles of beer on the wall.")
+            Console.WriteLine()
         End If
-        
+
         return bottles
     End Function
 End Module

@@ -1,25 +1,26 @@
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
+#include <random>
 
 int bottles = 99;
 
-int random()
+int getRandomNumber()
 {
-  srand(time(0));
-  return (rand() % 100) + 1;
+  std::default_random_engine generator;
+  std::uniform_int_distribution<int> distribution(0, 100);
+  return distribution(generator);
 }
 
 void verse(int bottles)
 {
   std::cout << bottles << " bottles of beer on the wall,\n";
   std::cout << bottles << " bottles of beer.\n";
-  if (random() > 80)
+  if (getRandomNumber() > 80)
   {
     std::cout << "If one of those bottles should happen to fall,\n";
     std::cout << bottles - 1 << " bottles of beer on the wall.\n\n";
   }
-  else if (random() < 20)
+  else if (getRandomNumber() < 20)
   {
     std::cout << "If that one bottle should happens to fall,\n";
     std::cout << "what a waste of alcohol!\n\n";
@@ -37,9 +38,36 @@ int infiniteBottles()
   return -1;
 }
 
-int ending(int bottles, bool waste)
+int endingPartTwo()
 {
-  if ((random() == 100) && (bottles == 1))
+  std::cout << "No more bottles of beer on the wall,\n";
+  std::cout << "no more bottles of beer.\n";
+  if (getRandomNumber() <= 60)
+  {
+    bottles = 0;
+    if (getRandomNumber() <= 10)
+    {
+      std::cout << "There's nothing else to fall,\n";
+      std::cout << "because there's no more bottles of beer on the wall."
+                << "\n\n";
+    }
+    else
+    {
+      std::cout << "We've taken them down and passed them around;\n";
+      std::cout << "now we're drunk and passed out!\n\n";
+    }
+  }
+  else
+  {
+    bottles = 99;
+    std::cout << "Go the the store and buy some more,\n";
+    std::cout << bottles << " bottles of beer on the wall.\n\n";
+  }
+}
+
+int endingPartOne(int bottles, bool waste)
+{
+  if ((getRandomNumber() == 100) && (bottles == 1))
   {
     if (waste)
     {
@@ -61,33 +89,8 @@ int ending(int bottles, bool waste)
     {
       std::cout << "No more bottles of beer on the wall.\n\n";
     }
-
-    std::cout << "No more bottles of beer on the wall,\n";
-    std::cout << "no more bottles of beer.\n";
-    if (random() <= 60)
-    {
-      bottles = 0;
-      if (random() <= 10)
-      {
-        std::cout << "There's nothing else to fall,\n";
-        std::cout << "because there's no more bottles of beer on the wall."
-                  << "\n\n";
-      }
-      else
-      {
-        std::cout << "We've taken them down and passed them around;\n";
-        std::cout << "now we're drunk and passed out!\n\n";
-      }
-    }
-    else
-    {
-      bottles = 99;
-      std::cout << "Go the the store and buy some more,\n";
-      std::cout << bottles << " bottles of beer on the wall.\n\n";
-    }
   }
-
-  return bottles;
+  return endingPartTwo();
 }
 
 int main()
@@ -103,10 +106,10 @@ int main()
 
     std::cout << bottles << " bottle of beer on the wall,\n";
     std::cout << bottles << " bottle of beer.\n";
-    if (random() > 80)
+    if (getRandomNumber() > 80)
     {
       std::cout << "If that one bottle should happens to fall,\n";
-      if (random() < 20)
+      if (getRandomNumber() < 20)
       {
         ifWaste = true;
       }
@@ -116,6 +119,6 @@ int main()
       std::cout << "Take one down and pass it around.\n";
     }
 
-    bottles = ending(bottles, ifWaste);
+    bottles = endingPartOne(bottles, ifWaste);
   }
 }

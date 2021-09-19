@@ -38,7 +38,7 @@ int main(int argc, char **argv)
     printf("How many 'A' should be written to a file: \n");
     scanf("%d", &num);
 
-    printf("What is the name for the file: (Must be 20 characters excluding .txt): \n");
+    printf("What is the name for the file: (Must be 24 characters): \n");
     scanf("%23s", filename);
 
     // Create a file and write to it then close it
