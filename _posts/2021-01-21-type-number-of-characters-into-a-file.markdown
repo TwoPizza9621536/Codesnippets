@@ -2,7 +2,7 @@
 layout: post
 title: Type Number of Characters Into A File
 date: 2021-01-21 16:28:19 -0500
-moddate: 2021-09-17 19:52:50 -0400
+moddate: 2021-09-19 10:30:58 -0400
 tags:
   - C
   - C++
@@ -22,35 +22,47 @@ categories:
   - Languages
   - Comparison
 toc: true
+urls:
+  - /blob/main/C/Printchara.c
+  - /blob/main/C++/Printchara.cpp
+  - /blob/main/C#/Printchara.cs
+  - /blob/main/D/Printchara.d
+  - /blob/main/Dart/Printchara.dart
+  - /blob/main/Fortran/Printchara.f90
+  - /blob/main/Java/Printchara.java
+  - /blob/main/Kotlin/Printchara.kt
+  - /blob/main/Python/Printchara.py
+  - /blob/main/Rubgy/Printchara.rb
+  - /blob/main/Rust/Printchara.rs
+  - /blob/main/VisualBasicDotNet/Printchara.vb
 ---
 
 This is page for the snippets shown in .
 
 ## C
 
-The download file is for Linux.
-The snippet below is for Windows.
+File:
+[Printchara.c]({{ site.github.repository_url }}{{ page.urls[1] }})
 
 {% highlight c linenos %}
 // Define any preprocessor header files
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 // Entry Point
 int main(int argc, char **argv)
 {
     // Set variables
     int num = 0;
-    char filename[23];
+    char filename[24];
 
     // Ask how many A's should be written
     // and the name of the file
     printf("How many 'A' should be written to a file: \n");
     scanf("%d", &num);
 
-    printf("What is the name for the file: (Must be 20 characters excluding .txt): \n");
-    scanf("%s", filename);
+    printf("What is the name for the file: (Must be 24 characters): \n");
+    scanf("%24s", filename);
 
     // Create a file and write to it then close it
     FILE *fptr;
@@ -65,14 +77,22 @@ int main(int argc, char **argv)
     fclose(fptr);
 
     // If previous operation completed then press any key to exit
-    printf("Operation Completed. Press any to exit.\n");
-    getchar();
+    printf("Operation Completed. Press Enter to exit.\n");
+    fflush(stdout);
+    int chara;
+    while ((chara != '\n') && (chara != EOF) )
+    {
+        chara = getchar();
+    }
 
     return 0;
 }
 {% endhighlight %}
 
 ## C++
+
+File:
+[Printchara.cpp]({{ site.github.repository_url }}{{ page.urls[2] | excape }})
 
 {% highlight cpp linenos %}
 // Define any preprocessor header files
@@ -122,6 +142,9 @@ int main(int argc, char **argv)
 {% endhighlight %}
 
 ## C#
+
+File:
+[Printchara.cs]({{ site.github.repository_url }}{{ page.urls[3] | excape }})
 
 {% highlight csharp linenos %}
 // Define any namespace
@@ -186,6 +209,9 @@ Console.ReadKey();
 
 ## D
 
+File:
+[Printchara.d]({{ site.github.repository_url }}{{ page.urls[4] }})
+
 {% highlight dlang linenos %}
 // Import the standard library components
 // This is the similar to c/c++ and alike
@@ -222,6 +248,9 @@ void main()
 {% endhighlight %}
 
 ## Dart
+
+File:
+[Printchara.dart]({{ site.github.repository_url }}{{ page.urls[5] }})
 
 {% highlight dart linenos %}
 // import modules if needed
@@ -263,6 +292,9 @@ void main() {
 
 ## Fortran
 
+File:
+[Printchara.f90]({{ site.github.repository_url }}{{ page.urls[6] }})
+
 For Fortran 90 may be compatible with later fortran.
 This is in Fortran 2008 highlighting.
 
@@ -282,7 +314,7 @@ program Printchara
     PRINT *, "How many 'A' should be written to a file: "
     READ(*,*) num
 
-    PRINT *, "What is the name for the file: (Must be 20 characters excluding .txt): "
+    PRINT *, "What is the name for the file: (Must be 24 characters): "
     READ(*,*) filename
 
     ! Create a file and write to it then close it
@@ -299,6 +331,9 @@ end program Printchara
 {% endhighlight %}
 
 ## Java
+
+File:
+[Printchara.java]({{ site.github.repository_url }}{{ page.urls[7] }})
 
 {% highlight java linenos %}
 // Define the project as a package to use in other java projects
@@ -362,6 +397,9 @@ public class Main {
 
 ## Kotlin
 
+File:
+[Printchara.kt]({{ site.github.repository_url }}{{ page.urls[8] }})
+
 {% highlight kotlin linenos %}
 // Kotlin is compatible with Java
 // Import modules if needed
@@ -415,6 +453,9 @@ fun main() {
 
 ## Python
 
+File:
+[Printchara.py]({{ site.github.repository_url }}{{ page.urls[9] }})
+
 {% highlight python linenos %}
 # Define modules if needed
 
@@ -448,33 +489,10 @@ input()
 
 ## Ruby
 
+File:
+[Printchara.rb]({{ site.github.repository_url }}{{ page.urls[10] }})
+
 {% highlight ruby linenos %}
-#!/usr/bin/env ruby
-# encoding: utf-8
-# SPDX-FileCopyrightText: Copyright (c) 2021 Sam W
-# SPDX-License-Identifier: MIT
-=begin
-Copyright (c) 2021 Sam W
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to
-deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.
-=end
-
 # Define modules if needed
 
 # Ruby does not need an entry point becuase it is both
@@ -506,6 +524,9 @@ gets.chomp
 {% endhighlight %}
 
 ## Rust
+
+File:
+[Printchara.rs]({{ site.github.repository_url }}{{ page.urls[11] }})
 
 {% highlight rust linenos %}
 // import namespace of needed
@@ -563,6 +584,9 @@ fn writefile(filename: String, num: u32) -> std::io::Result<()> {
 
 ## Visual Basic
 
+File:
+[Printchara.vb]({{ site.github.repository_url }}{{ page.urls[12] }})
+
 {% highlight visualbasic linenos %}
 ' Define any namespace
 Imports System
@@ -615,4 +639,3 @@ Module Printchara
     End Sub
 End Module
 {% endhighlight %}
-
