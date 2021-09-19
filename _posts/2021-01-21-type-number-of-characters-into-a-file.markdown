@@ -261,7 +261,8 @@ import 'dart:io';
 // import 'package:print_chara/print_chara.dart' as print_chara;
 
 // Entry point
-void main() {
+void main()
+{
     // Ask how many A's should be written
     // and the name of the file
     // Dart is C and javascript like language.
